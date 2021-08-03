@@ -1,0 +1,71 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+
+    id 'war'
+    id 'eclipse-wtp'
+}
+
+
+mainClassName = 't2.teste.Main'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+run {
+    standardInput = System.in
+}
+
+
+
+dependencies {
+    implementation 'com.google.api-client:google-api-client:1.30.4'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.30.6'
+    implementation 'com.google.apis:google-api-services-sheets:v4-rev581-1.25.0'
+    implementation 'com.google.apis:google-api-services-script:v1-rev175-1.23.0'
+
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.1.4'
+
+    
+
+    // A partir daqui
+    // implementation group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.1.1'
+    implementation group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.0'
+    // implementation group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet', version: '3.0.2'
+    implementation group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet', version: '2.5.1'
+    // implementation group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '3.0.2'
+    implementation group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '2.5.1'
+    // implementation group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '3.0.2'
+    implementation group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.5.1'
+    // implementation group: 'com.sun.jersey', name: 'jersey-json', version: '1.19.4'
+    implementation group: 'com.sun.jersey', name: 'jersey-json', version: '1.14'
+    // implementation group: 'com.sun.jersey', name: 'jersey-client', version: '1.19.4'
+    implementation group: 'com.sun.jersey', name: 'jersey-client', version: '1.14'
+    
+    // https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-rs-client
+    implementation group: 'org.apache.cxf', name: 'cxf-rt-rs-client', version: '3.4.4'
+
+
+    
+
+    // //! teste
+    // implementation 'org.glassfish.jersey.media:jersey-media-json-jackson:2.14'
+
+    // implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    // implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+
+    // implementation 'org.glassfish.jersey.inject:jersey-hk2:2.26'
+
+    // implementation 'org.glassfish.jersey.media:jersey-media-json-processing:2.26'
+    // implementation 'org.glassfish.jersey.media:jersey-media-json-binding:2.26'
+
+    // implementation "org.glassfish.jersey.media:jersey-media-json-jackson:2.25.1"
+    // implementation "org.apache.commons:commons-lang3:3.11"
+
+
+
+    
+}
