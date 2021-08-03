@@ -1,0 +1,46 @@
+1) a) Fazer tabela(ta no discord)
+   b) Profundidade
+   ci) 46
+   cii) 22
+   d) g-gready; a*-admissivel(max)
+   e) gready
+   fi) 10
+   fii) 12
+
+2) a) Fazer tabela(ta no discord)
+   b) Profundidade
+   ci) 1989
+   cii) 180
+   d) g-gready; a*-admissivel(max)
+   e) gready
+   fi) 341
+   fii) 46
+
+   largura, profundidade, iterativa
+   
+   nome Alg     | nº nós vist | nº nós mem | encontra solução | melhor solução
+   -------------+-------------+------------+------------------+----------------
+   largura      |             |            |                  |
+   -------------+-------------+------------+------------------+----------------
+   profundidade |             |            |                  |
+   -------------+-------------+------------+------------------+----------------
+   iterativo    |             |            |                  |
+   
+   
+   pni, agente, it
+   custo(9)
+   profundidade(9)
+   e([],(6,1))
+   e(sobe,(5,1))
+   e(dir,(5,2))
+   e(sobe,(4,2))
+   e(sobe,(3,2))
+   e(sobe,(2,2))
+   e(dir,(2,3))
+   e(dir,(2,4))
+   e(sobe,(1,4))
+   e(sobe,(0,4))
+   nos(visitados(3968322),lista(18))
+   
+   pni, caixa, it
+

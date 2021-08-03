@@ -1,0 +1,323 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper, total={16cm, 24cm}]{geometry}
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tikz}
+    \usetikzlibrary{shadows}
+\usepackage{booktabs}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{listings}
+    \renewcommand\lstlistingname{Listagem}
+    \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, basicstyle=\footnotesize\ttfamily, frame=tb,rulesepcolor=\color{gray}, breaklines=true}
+\usepackage{blindtext}
+
+% -------------------------------------------------------------------------------------------
+\title
+{
+    \includegraphics[width=0.4\textwidth]{imgs/university.png}
+    \\[0.1cm]
+    \textbf{4º Trabalho} \\
+    Inteligência Artificial
+}
+
+\author
+{
+    \textbf{Professora:} Irene Rodrigues \\
+    \textbf{Realizado por:} Filipe Alfaiate (43315), Miguel de Carvalho (43108), João Pereira (42864) 
+}
+\date{\today}
+
+% -------------------------------------------------------------------------------------------
+%                                Body                                                       %
+% -------------------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle
+
+% -------------------------------------------------------------------------------------------
+\section{}
+
+\textbf{Vocabulário}
+
+\hspace{0,4cm}\verb|Condições|:
+
+\hspace{0,8cm}\verb|Eternas|:
+
+\hspace{1,2cm} \verb|linha(L, C, C1)| - A linha \textbf{L} com origem no local \textbf{C} e 
+com o destino \textbf{C1}
+
+\hspace{0,8cm} \verb|Fluentes|:
+
+\hspace{1,2cm} \verb|objLocal(O, L)| - O objeto \textbf{O} está no local \textbf{L} 
+
+\hspace{1,2cm} \verb|combLocal(C, L)| - O comboio \textbf{C} está no local \textbf{L} 
+
+\hspace{1,2cm} \verb|objComb(O, C)| - O objeto \textbf{O} está no comboio \textbf{C}
+
+
+\hspace{0,4cm}\verb|Ações|:
+
+\hspace{0,8cm} \verb|desloca(C, L)| - O comboio \textbf{C} desloca-se para o local \textbf{L}
+
+\hspace{0,8cm} \verb|coloca(O, C)| - O objeto \textbf{O} é colocado dentro do comboio \textbf{C}
+
+\hspace{0,8cm} \verb|tira(O, C)| - O objeto \textbf{O} é retirado de dentro do comboio \textbf{C}
+
+
+\section{}
+
+\textbf{Estado Inicial:}
+
+\begin{lstlisting}
+    estado_inicial([
+                objLocal(1, porto),
+                objLocal(2, lisboa),
+                objLocal(3, lisboa),
+                objLocal(4, evora),
+                objLocal(5, evora),
+                combLocal(1, lisboa),
+                combLocal(2, lisboa),
+                linha(1, lisboa, porto),
+                linha(1, porto, lisboa),
+                linha(2, lisboa, evora),
+                linha(2, evora, lisboa)
+                ]).
+\end{lstlisting}
+
+\newpage
+\textbf{Estado Final:}
+
+\begin{lstlisting}
+    estado_final1([
+        objLocal(1, evora),
+        objLocal(2, porto),
+        objLocal(3, evora),
+        objLocal(4, porto),
+        objLocal(5, lisboa)
+        ]).
+\end{lstlisting}
+
+\section{}
+
+\hspace{0,6cm}Considerando o estado inicial da pergunta anterior até ao estado 1 escrito nesta pergunta
+a solução do \verb|pop| seria:
+
+\begin{lstlisting}
+    [s1-inicial,
+     s5-desloca(1, porto),
+     s4-coloca(1, 1),
+     s427-desloca(1, lisboa),
+     s3-tira(1, 1),
+     s2-final]
+\end{lstlisting}
+
+Um exemplo de \textbf{ameaça}:
+
+\begin{lstlisting}
+    ameaca(s5, s4, s427, combLocal(1, porto))
+\end{lstlisting}
+
+Significa que o \verb|s427| é ameaçado pelo \verb|s5| e \verb|s4|, o que vai originar uma
+ordenação topológica \verb|s5 < s4 < s427|.
+
+Tendo todas as \textbf{ameaças resolvidas} vamos obter uma ordenação topológica do resultado
+final \verb|s1 < s5 < s4 < s427 < s3 < s2|.
+
+\section{}
+
+\hspace{0,6cm}A solução deste problema não pode ser obtida diretamente pois o programa excede
+o limite de memória. Para solucionar este problema, dividimos em sub-problemas, de forma a não
+exceder o limite de memória.
+
+\textbf{1º Sub-problema}:
+
+\hspace{1,2cm}\textbf{Estado Inicial:}
+
+\begin{lstlisting}
+    estado_inicial([
+                objLocal(1, porto),
+                objLocal(2, lisboa),
+                objLocal(3, lisboa),
+                objLocal(4, evora),
+                objLocal(5, evora),
+                combLocal(1, lisboa),
+                combLocal(2, lisboa),
+                linha(1, lisboa, porto),
+                linha(1, porto, lisboa),
+                linha(2, lisboa, evora),
+                linha(2, evora, lisboa)
+                ]).
+\end{lstlisting}
+
+\newpage
+\hspace{1,2cm}\textbf{Estado Final:}
+
+\begin{lstlisting}
+    estado_final([
+                objLocal(1, lisboa),
+                objLocal(2, lisboa),
+                objLocal(3, lisboa),
+                objLocal(4, lisboa),
+                objLocal(5, lisboa)
+                ]).
+\end{lstlisting}
+
+Considerando os \textbf{estados iniciais e finais} referidos acima, a solução \verb|pop| seria
+
+\begin{lstlisting}
+    [s1-inicial,
+     s1059-desloca(2, evora),
+     s5-desloca(1, porto),
+     s1009-coloca(4, 2),
+     s1104-coloca(5, 2),
+     s4-coloca(1, 1),
+     s1083-desloca(2, lisboa),
+     s427-desloca(1, lisboa),
+     s1096-tira(5, 2),
+     s3-tira(1, 1),
+     s428-tira(4, 2),
+     s2-final]
+\end{lstlisting}
+
+Um exemplo de \textbf{ameaça}:
+
+\begin{lstlisting}
+    ameaca(s1059, s1104, s1083, combLocal(2, evora))
+\end{lstlisting}
+
+Significa que o \verb|s1083| é ameaçado pelo \verb|s1059| e \verb|s1104|, o que vai originar uma
+ordenação topológica \verb|s1059 < s1104 < s1083|.
+
+\newpage
+
+\textbf{2º Sub-problema}:
+
+\hspace{1,2cm}\textbf{Estado Inicial:}
+
+\begin{lstlisting}
+    estado_inicial([
+                objLocal(1, lisboa),
+                objLocal(2, lisboa),
+                objLocal(3, lisboa),
+                objLocal(4, lisboa),
+                objLocal(5, lisboa),
+                combLocal(1, lisboa),
+                combLocal(2, lisboa),
+                linha(1, lisboa, porto),
+                linha(1, porto, lisboa),
+                linha(2, lisboa, evora),
+                linha(2, evora, lisboa)
+                ]).
+\end{lstlisting}
+
+\hspace{1,2cm}\textbf{Estado Final:}
+
+\begin{lstlisting}
+    estado_final([
+        objLocal(1, evora),
+        objLocal(2, porto),
+        objLocal(3, evora),
+        objLocal(4, porto),
+        objLocal(5, lisboa)
+        ]).
+\end{lstlisting}
+
+Considerando os \textbf{estados iniciais e finais} referidos acima, a solução \verb|pop| seria
+
+\begin{lstlisting}
+    [s1-inicial,
+     s11938-coloca(1, 2),
+     s17552-coloca(2, 1),
+     s18110-coloca(3, 2),
+     s18153-coloca(4, 1),
+     s17129-desloca(2, evora),
+     s17967-desloca(1, porto),
+     s17551-tira(2, 1),
+     s18017-tira(3, 2),
+     s18152-tira(4, 1),
+     s3-tira(1, 2),
+     s2-final]
+\end{lstlisting}
+
+Um exemplo de \textbf{ameaça}:
+
+\begin{lstlisting}
+    ameaca(s1, s18153, s17967, combLocal(1, lisboa))
+\end{lstlisting}
+
+Significa que o \verb|s17967| é ameaçado pelo \verb|s18153| e \verb|s1|, o que vai originar uma
+ordenação topológica \verb|s1 < s18153 < s17967|.
+
+\newpage
+\textbf{Solução do Problema}:
+
+\hspace{1,2cm}\textbf{Estado Inicial}:
+
+\begin{lstlisting}
+    estado_inicial([
+                objLocal(1, porto),
+                objLocal(2, lisboa),
+                objLocal(3, lisboa),
+                objLocal(4, evora),
+                objLocal(5, evora),
+                combLocal(1, lisboa),
+                combLocal(2, lisboa),
+                linha(1, lisboa, porto),
+                linha(1, porto, lisboa),
+                linha(2, lisboa, evora),
+                linha(2, evora, lisboa)
+                ]).
+\end{lstlisting}
+
+\hspace{1,2cm}\textbf{Estado Final:}
+
+\begin{lstlisting}
+    estado_final([
+        objLocal(1, evora),
+        objLocal(2, porto),
+        objLocal(3, evora),
+        objLocal(4, porto),
+        objLocal(5, lisboa)
+        ]).
+\end{lstlisting}
+
+Considerando os \textbf{estados iniciais e finais} referidos acima, a solução \verb|pop| seria
+
+\begin{lstlisting}
+    [s1-inicial,
+     s1059-desloca(2, evora),
+     s5-desloca(1, porto),
+     s1009-coloca(4, 2),
+     s1104-coloca(5, 2),
+     s4-coloca(1, 1),
+     s1083-desloca(2, lisboa),
+     s427-desloca(1, lisboa),
+     s1096-tira(5, 2),
+     s6-tira(1, 1),
+     s428-tira(4, 2),
+     s11938-coloca(1, 2),
+     s17552-coloca(2, 1),
+     s18110-coloca(3, 2),
+     s18153-coloca(4, 1),
+     s17129-desloca(2, evora),
+     s17967-desloca(1, porto),
+     s17551-tira(2, 1),
+     s18017-tira(3, 2),
+     s18152-tira(4, 1),
+     s3-tira(1, 2),
+     s2-final]
+\end{lstlisting}
+
+Devido ao programa não executar num todo, não foi possível calcular as ameaças, contudo 
+nos sub-problemas usados para calcular o \textbf{problema total} estão referidas algumas ameaças
+
+Tendo todas as \textbf{ameaças resolvidas} vamos obter uma ordenação topológica do resultado
+final 
+\begin{lstlisting}
+    s1 < s1059 < s5 < s1009 < s1104 < s4 < s1083 < s427 < s1096 < s6 < s428 < s11938 < s17552 < s18110 < s18153 < s17129 < s17967 < s17551 < s18017 < s18152 < s3 < s2
+\end{lstlisting}
+% -------------------------------------------------------------------------------------------
+\end{document}

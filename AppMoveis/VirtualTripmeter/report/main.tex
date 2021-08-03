@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper, total={16cm, 24cm}]{geometry}
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tikz}
+    \usetikzlibrary{shadows}
+\usepackage{booktabs}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{listings}
+    \renewcommand\lstlistingname{Listagem}
+    \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, basicstyle=\footnotesize\ttfamily, frame=tb,rulesepcolor=\color{gray}, breaklines=true}
+\usepackage{blindtext}
+
+% -------------------------------------------------------------------------------------------
+\title
+{
+    \includegraphics[width=0.4\textwidth]{university.png}
+    \\[0.1cm]
+    \textbf{1ª Versão} \\
+    Sistemas Móveis e Aplicações
+}
+
+\author
+{
+    \textbf{Professor:} Vítor Nogueira \\
+    \textbf{Realizado por:} Miguel de Carvalho (43108), Filipe Alfaiate (43315)
+}
+\date{\today}
+
+% -------------------------------------------------------------------------------------------
+%                                Body                                                       %
+% -------------------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle
+
+% -------------------------------------------------------------------------------------------
+\begin{itemize}
+    \item Nome da aplicação: \textbf{Virtual Tripmeter}
+    \item Objetivos: 
+    \begin{itemize}
+        \item Geral:
+        \begin{itemize}
+            \item Ajudar os Co-Pilotos de \textbf{Rally} a conseguirem treinar a leitura dos \textbf{RoadBooks} (indicações do caminho), simulando o funcionamento do equipamento \textbf{TerraTrip}. É utilizado para registar as distâncias percorridas (Parciais e Totais), o que auxilia na leitura do \textbf{RoadBook}, pois as \textbf{notas} apresentam sempre uma \textbf{distância parcial} entre elas e apresenta também a \textbf{distância total} desde o início até à posição atual do carro.
+        \end{itemize}
+        \item Especifico:
+        \begin{itemize}
+            \item A aplicação suporta a língua Inglesa e Portuguesa;
+            \item Basta o utilizador criar ou entrar na aplicação utilizando a sua conta;
+            \item As definições do utilizador são sincronizadas através da Cloud;
+            \item Simulação da estrutura de um \textbf{TerraTrip}, ou seja, 2 contadores de unidade de distância calculados pela "velocidade" a que o veículo se desloca. As caixas podem sofrer um \textit{reset} com um toque longo ou com um simples toque;
+            \item Possibilidade de aumentar ou diminuir a velocidade atual ao tocar nos \textbf{botões} "+" e "-", caso seja feito um toque longo, o aumento de velocidade será maior;
+            \item Botões que permitem \textbf{começar} (play), \textbf{parar} (pause) e \textbf{terminar} (stop) a simulação do \textbf{TerraTrip};
+            \item Possibilidade de usar \textbf{unidades imperiais} (Milhas) em vez de \textbf{unidades métricas} (Quilómetros);
+            \item Escolher uma velocidade base;
+            \item Possibilidade de emitir um alerta quando é realizado um \textit{reset} num dos contadores.
+        \end{itemize}
+    \end{itemize}
+    \item Dificuldades:
+    \begin{itemize}
+        \item Entender o funcionamento da linguagem \textit{Kotlin} e as suas diferenças face a uma linguagem já conhecida por nós, o \textit{Java};
+        \item Entender a estrutura e as diferentes componentes que constituem uma aplicação \textit{Android};
+        \item Perceber o funcionamento da plataforma \textit{FireBase} e perceber a facilidade com que permite gerir utilizadores, usar bases de dados, gerar estatísticas e guardar ficheiros.
+    \end{itemize}
+\end{itemize}
+
+% -------------------------------------------------------------------------------------------
+\end{document}

@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper, total={16cm, 24cm}]{geometry}
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tikz}
+    \usetikzlibrary{shadows}
+\usepackage{booktabs}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{listings}
+    \renewcommand\lstlistingname{Listagem}
+    \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, basicstyle=\footnotesize\ttfamily, frame=tb,rulesepcolor=\color{gray}, breaklines=true}
+\usepackage{blindtext}
+
+% -------------------------------------------------------------------------------------------
+\title
+{
+    \includegraphics[width=0.4\textwidth]{imgs/university.png}
+    \\[0.1cm]
+    \textbf{3º Trabalho} \\
+    Inteligência Artificial
+}
+
+\author
+{
+    \textbf{Professora:} Irene Rodrigues \\
+    \textbf{Realizado por:} Filipe Alfaiate (43315), Miguel de Carvalho (43108), João Pereira (42864) 
+}
+\date{\today}
+
+% -------------------------------------------------------------------------------------------
+%                                Body                                                       %
+% -------------------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle
+
+% -------------------------------------------------------------------------------------------
+\section{}
+
+\hspace{0,6cm}a) \verb|estado_inicial(e(1,  2,  5,  7)).|
+
+b) \verb|terminal(e(0, 0, 0, 0)).|
+
+c) \verb|valor(E, -1, P):- terminal(E), R is P mod 2, R = 1.|
+
+\hspace{0,45cm}\verb|valor(E, 1, P):- terminal(E), R is P mod 2, R=0.|
+
+d) Dado o estado inicial \verb|e(1, 2, 2, 5)| vamos remover \textbf{na linha 4, 4 paus}
+(\verb|ret(4,4)|), obtendo um estado \verb|e(1, 2, 2, 1)|. Para obter este resultado no código
+do \textbf{mini-max} temos que \textbf{tirar o comentário} do predicado \verb|g(Jogo)| entre a
+linha \textbf{3-9} e \textbf{comentar} o predicado \verb|g(Jogo)| entre a linha \textbf{14-16}.
+
+e) A pesquisa alfa-beta, também conhecida como \textbf{Poda da Árvore} (Pruning) é uma técnica
+de compressão de dados que reduz o tamanho da \textbf{árvore do min-max} através da remoção de
+secções da árvore que não são críticas e redundantes para a decisão, ou seja, \textbf{reduz a complexidade 
+temporal e espacial}.
+
+f)
+
+g) Para obter este resultado no código do \textbf{mini-max} temos que \textbf{tirar o comentário}
+do predicado \verb|g(Jogo)| entre a linha \textbf{14-16} e \textbf{comentar} o predicado
+\verb|g(Jogo)| entre a linha \textbf{3-9}.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(1, 2, 2, 5)| o jogo seria o seguinte:
+\begin{lstlisting}
+    ret(4,4)
+    e(1,2,2,1)
+    1.
+    1.
+    e(0,2,2,1)
+    ret(4,1)
+    e(0,2,2,0)
+    2.
+    1.
+    e(0,1,2,0)
+    ret(3,2)
+    e(0,1,0,0)
+    2.
+    1.
+    e(0,0,0,0)
+    pc ganhou
+\end{lstlisting}
+
+\newpage
+
+h) Usando \textbf{mini-max}:
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(0, 2, 1, 0)| iria expandir 3 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(0, 2, 2, 0)| iria expandir 4 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(0, 3, 2, 0)| iria expandir 5 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(0, 3, 3, 0)| iria expandir 6 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(0, 4, 3, 0)| iria expandir 7 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(0, 4, 4, 0)| iria expandir 8 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(0, 5, 4, 0)| iria expandir 9 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(0, 5, 5, 0)| iria expandir 10 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(0, 6, 5, 0)| iria expandir 11 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(0, 6, 6, 0)| iria expandir 12 nós.
+
+% -------------------------------------------------------------------------------------------
+\section{}
+
+\hspace{0,6cm}a) \verb|estado_inicial(e(p1(0, 0), p2(2, 2), p1)).|
+
+b) \verb|terminal(E):- +op1(E, , ).|
+
+c) \verb|valor(E, -1, P):- terminal(E), R is P mod 2, R = 1.|
+
+\hspace{0,45cm}\verb|valor(E, 1, P):- terminal(E), R is P mod 2, R=0.|
+
+d) Para obter este resultado no código do \textbf{mini-max} temos que \textbf{tirar o comentário}
+do predicado \verb|g(Jogo)| entre a linha \textbf{14-16} e \textbf{comentar} o predicado
+\verb|g(Jogo)| entre a linha \textbf{3-9}. No predicado que \textbf{não se encontra comentado}
+deverá ser alterado o \textbf{nome do agente} para \verb|agente_amazona|.
+
+e) Usando \textbf{mini-max} sem nenhuma \textbf{posição bloqueada} exceto pelos jogadores (p1,p2):
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(0, 0), p2(2, 2), p1)| iria expandir 29 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(0, 1), p2(2, 2), p1)| iria expandir 33 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(0, 2), p2(2, 2), p1)| iria expandir 28 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(1, 0), p2(2, 2), p1)| iria expandir 33 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(1, 1), p2(2, 2), p1)| iria expandir 37 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(1, 2), p2(2, 2), p1)| iria expandir 29 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(2, 0), p2(2, 2), p1)| iria expandir 28 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(2, 1), p2(2, 2), p1)| iria expandir 29 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(0, 0), p2(2, 1), p1)| iria expandir 34 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(0, 0), p2(2, 0), p1)| iria expandir 28 nós.
+
+
+% -------------------------------------------------------------------------------------------
+\end{document}

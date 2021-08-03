@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "706427204463",
+    "project_id": "virtual-tripmeter",
+    "storage_bucket": "virtual-tripmeter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706427204463:android:8fc1440aaa592a82d4ae9a",
+        "android_client_info": {
+          "package_name": "pt.miguelndecarvalho.virtualtripmeter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706427204463-2smhoid2lsrauau1khv3ie8975k719c5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pt.miguelndecarvalho.virtualtripmeter",
+            "certificate_hash": "64642ed6cc3ac7c2b78ddbd151a0334fb00cd7a1"
+          }
+        },
+        {
+          "client_id": "706427204463-iug5dr2i2j9scfb9h649km7k4pnj0bkq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw5ys6V9QI0d_9Mc4ILh3H7ZGjj5u-TZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706427204463-iug5dr2i2j9scfb9h649km7k4pnj0bkq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

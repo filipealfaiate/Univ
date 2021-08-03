@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General -->
+    <string name="app_name">Virtual Tripmeter</string>
+    <string name="title_home">Início</string>
+    <string name="title_trip">Tripmeter</string>
+    <string name="title_settings">Configurações</string>
+    <string name="copyright">MiguelNdeCarvalho e Filipe Alfaiate Ⓒ 2021</string>
+    <!-- Login -->
+    <string name="login_button">Entrar</string>
+    <string name="login_welcome">Bem-vindo(a) %s!</string>
+    <string name="login_back">Bem-vindo(a) de volta %s!</string>
+    <string name="login_signup">Criar conta</string>
+    <string name="login_or">-OU-</string>
+    <string name="login_alternative">Entrar com</string>
+    <string name="login_register_login_page">Não tem uma Conta?</string>
+    <string name="login_hint_username">Insira o Nome de Utilizador</string>
+    <string name="login_hint_password">Insira a palavra-passe</string>
+    <string name="login_save_credentials">Lembrar conta</string>
+    <string name="login_recover">Esqueceu a palavra-passe?</string>
+    <string name="login_error_empty_username">Nome de utilizador vazio</string>
+    <string name="login_error_empty_password">Palavra-passe está vazia</string>
+    <string name="login_error_mismatch">Nome de utilizador e/ou palavra-passe inválida!</string>
+    <string name="login_logout">Sair</string>
+    <string name="login_logout_toast">Esperamos que volte em breve %s!</string>
+    <string name="login_delete">Apagar conta</string>
+    <string name="login_delete_toast">Adeus %s. Foi bom conhecê-lo!</string>
+    <string name="login_delete_dialog_title">Apagar conta</string>
+    <string name="login_delete_dialog_description">Tem a certeza que deseja apagar a conta?</string>
+    <!-- Home Fragment -->
+    <string name="home_description">Não irá falhar uma nota outra vez!</string>
+    <string name="home_button">Começar</string>
+    <!-- Trip Fragment -->
+    <string name="trip_unitKilometersHour">km/h</string>
+    <string name="trip_unitMilesHour">mph</string>
+    <string name="trip_unitKilometers">km</string>
+    <string name="trip_unitMiles">mi</string>
+    <string name="trip_totalTitle">Total</string>
+    <string name="trip_totalInstructions">Toque longo para reiniciar</string>
+    <string name="trip_partialTitle">Parcial</string>
+    <string name="trip_partialInstructions">Toque para reiniciar</string>
+    <!-- Settings Fragment -->
+    <string name="settings_unitsButton">Usar Unidades de Medida Imperiais</string>
+    <string name="settings_velocityText">Definir velocidade base</string>
+    <string name="settings_velocityDefault">100</string>
+    <string name="settings_alertButton">Reproduzir um som ao reiniciar os contadores</string>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <Switch
+        android:id="@+id/settingsSwitchUnits"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/settings_unitsButton"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/yellow_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/settingsSwitchAlerts"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="552dp"
+        android:text="@string/settings_alertButton"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/yellow_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/settingsBaseSpeedTextView"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:text="@string/settings_velocityText"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:textColor="@color/yellow_500"
+        app:layout_constraintBottom_toTopOf="@+id/settingsSwitchAlerts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsSwitchUnits" />
+
+    <EditText
+        android:id="@+id/settingsBaseSpeedTextEdit"
+        android:layout_width="49dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="number"
+        android:text="@string/settings_velocityDefault"
+        app:layout_constraintBottom_toTopOf="@+id/settingsSwitchAlerts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/settingsBaseSpeedTextView"
+        app:layout_constraintTop_toBottomOf="@+id/settingsSwitchUnits" />
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="380dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/login_logout"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsSwitchAlerts" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="380dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/login_delete"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logout_button" />
+
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="@string/copyright"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_button"
+        app:layout_constraintVertical_bias="0.997" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
