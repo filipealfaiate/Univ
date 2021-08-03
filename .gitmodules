@@ -1,0 +1,3 @@
+[submodule "Estagio"]
+	path = Estagio
+	url = git@github.com:filipealfaiate/Estagio.git
