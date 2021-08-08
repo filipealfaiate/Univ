@@ -1,0 +1,95 @@
+a)
+   | nomer
+---+-------------
+ 1 | Pato à brás
+ 2 | Croquete
+ 3 | Bitoque
+
+b)
+   | idereceita | nomer
+---+------------+-----------------------------
+ 1 | r02        | Couscous com vegetais
+ 2 | r03        | Tosta Mista
+ 3 | r04        | Hamburguer de lentilhas
+ 4 | r05        | Empadão de Peru
+ 5 | r06        | Risotto de cogumelos
+ 6 | r07        | Sopa de tomate
+ 7 | r08        | Pão com paté de azeitona
+ 8 | r09        | Folhado de maçã com gelado
+ 9 | r10        | Rolo de Tofu
+10 | r11        | Mousse de chocolate
+11 | r12        | Mousse de chocolate
+12 | r13        | Doce de amendoa
+13 | r15        | Mini pizzas
+14 | r16        | Pizza
+15 | r17        | Cogumelos Salteados
+16 | r18        | Cheesecake de maracujá
+17 | r19        | Cogumelo recheado
+18 | r20        | Lasanha espinafres
+19 | r21        | Nuggets
+
+c)
+   | count
+---+-------
+ 1 | 3
+
+d)
+   | nome         | idmemb
+---+--------------+--------
+ 1 | Frodo        | m01
+ 2 | Manuel Silva | m02
+ 3 | Gus          | m03
+ 4 | Javuer Peña  | m04
+ 5 | Beth Harmon  | m05
+ 6 | Katharina    | m06
+ 7 | Morty        | m08
+ 8 | Fernando     | m09
+ 9 | Abid         | m10
+
+e)
+   | nome      | idmemb
+---+-----------+--------
+ 1 | Fernando  | m09
+ 2 | Gus       | m03
+ 3 | Katharina | m06
+ 4 | Sully     | m07
+
+f)
+   | nome  | idmemb
+---+-------+-------
+ 1 | Sully | m07
+ 2 | Frodo | m01
+
+g)
+   | nome         | idmemb
+---+--------------+--------
+ 1 | Frodo        | m01
+ 2 | Gus          | m03
+ 3 | Manuel Silva | m02
+ 4 | Sully        | m07
+
+h)
+   | nomer                  | idreceita
+---+------------------------+-----------
+ 1 | Cheesecake de maracujá | r18
+ 2 | Mousse de chocolate    | r11
+
+i)
+   | nome
+---+-------
+ 1 | Frodo
+
+k)
+   | nomer               | idreceita | count | custo
+---+---------------------+-----------+-------+-------
+ 1 | Mousse de chocolate | r12       | 3     | $
+
+l)
+   | count
+---+-------
+ 1 | 1
+
+m)
+   | nomer                 | idreceita
+---+-----------------------+-----------
+ 1 | Couscous com vegetais | r02

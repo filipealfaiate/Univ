@@ -1,0 +1,126 @@
+--(a) Quais as Receitas com Pato?
+select NomeR
+from receita natural inner join ingRec natural inner join ingrediente
+where NomeI like 'pato';
+
+--(b) Quais as Receitas que n ̃ao tˆem Pato?
+select IdReceita, NomeR
+from receita
+except
+select IdReceita, NomeR
+from receita natural inner join ingRec natural inner join ingrediente
+where NomeI like 'pato'
+Order by IdReceita;
+
+--(c) Quais os membros que tˆem receitas com Pato?
+select count(IdMemb)
+from membro natural inner join recMemb natural inner join receita natural inner join ingRec
+where NomeI like 'pato';
+
+--(d) Quais os amigos dos membros que tˆem receitas com Pato?
+with autoresPato as (select IdMemb as x
+from membro natural inner join recMemb natural inner join receita natural inner join ingRec
+where NomeI like 'pato')
+
+select Nome,IdMemb
+from membro,amigo,autoresPato
+where Idmemb=IdMemb1 and IdMemb2=x
+Union
+select Nome,Idmemb
+from membro,amigo,autoresPato
+where IdMemb=IdMemb2 and IdMemb1=x
+Order by IdMemb;
+
+--(e) Quais os membros que dao mais de 1 estrela a Receitas com Pato?
+select distinct Nome,IdMemb
+from membro natural inner join gosto natural inner join receita natural inner join ingRec
+where valor > 1 and NomeI like 'pato';
+
+--(f) Quais os membros que têm receitas com Ovos e Amêndoa?
+select distinct Nome, IdMemb
+from membro natural inner join recMemb natural inner join receita natural inner join ingRec
+where NomeI like 'ovo'
+intersect
+select distinct Nome, IdMemb
+from membro natural inner join recMemb natural inner join receita natural inner join ingRec
+where NomeI like 'amendoa';
+
+--(g) Quais os membros que têm receitas com Pato ou Peru ́?
+select distinct Nome, IdMemb
+from membro natural inner join recMemb natural inner join receita natural inner join ingRec
+where NomeI like 'pato' or NomeI like 'peru';
+
+--(h) Quais s ̃ao as sobremesas que tem mais fotografias?
+with a as (select NomeR, IdReceita, count(Url) as x
+from receita natural inner join fotRec group by (NomeR,IdReceita))
+
+select NomeR, IdReceita
+from a
+where x = (select max(x) from a);
+
+--(i) Quais sao os membros que dao 3 estrelas a todas as entradas com cogumelos?
+
+--todas as entradas com cogumelos
+with aux as (select IdReceita
+from receita natural inner join ingRec natural inner join entrada
+where NomeI like 'cogumelos' group by IdReceita),
+
+--Todos os membros que têm valor 3 em entradas com cogumelos e quantas vezes cada nome aparece
+aux2 as (select Nome, count(Nome) as cNome
+from membro natural inner join gosto natural inner join aux
+where valor = 3 and IdReceita = aux.IdReceita group by Nome),
+
+-- O número total de entradas com cogumelos
+nEntradas as (select count(aux.IdReceita) as cEntradas from aux)
+
+-- Se o nome do membro aparece tantas vezes quanto o numero total de entradas com cogumelos, significa que gosta de todas as entradas com cogumelos
+select Nome
+from aux2,nEntradas
+where cEntradas = cNome;
+
+--(j) Qual  ́e o membro que tem mais gostos com 3 estrelas dos seus amigos nas suas receitas?
+
+
+--(k) Para cada Sobremesa rapida que usa chocolate indique o numero de gostos com 3 estrelas e o custo.
+-- Sobremesa rápida demora menos de 30 mins
+with sobRapChoco as ( select NomeR, IdReceita, tempo, custo
+from sobremesa natural inner join receita natural inner join ingRec
+where NomeI like 'chocolate' and tempo<30)
+
+select NomeR, IdReceita, count(valor), custo
+from gosto natural inner join sobRapChoco
+where valor = 3 group by NomeR,IdReceita,custo;
+
+
+--(l) Quantas sobremesas têm o nome mousse de chocolate e têm mais de cinco membros que deram 2 ou mais estrelas?
+
+with r as (select IdReceita, count(Nome) as x
+from membro natural inner join gosto natural inner join receita
+where NomeR like 'Mousse de chocolate' and valor >1 group by IdReceita)
+
+select count(r.IdReceita)
+from r
+where x>=5;
+
+
+--(m) Sabendo que uma receita pode ser recomendada a um membro se todos os seus amigos a avaliaram com duas ou mais estrelas. Indique quais sao as receitas recomendadas ao membro Manuel Silva.
+
+with IdManuel as (select IdMemb from membro where nome like 'Manuel Silva'),
+
+amigosManuel as (select membro.IdMemb
+					 from membro,amigo,IdManuel
+					 where membro.IdMemb = amigo.IdMemb1 and amigo.IdMemb2 = IdManuel.IdMemb
+					 Union
+					 select membro.IdMemb
+					 from membro,amigo,IdManuel
+					 where membro.IdMemb = amigo.IdMemb2 and amigo.IdMemb1 = IdManuel.IdMemb),
+
+nReceitas as (select idReceita, count(IdReceita) as x
+from amigosManuel natural inner join gosto
+where valor >= 2 group by IdReceita),
+
+nAmigos as (select count(idMemb) as y from amigosManuel)
+
+select NomeR, receita.IdReceita
+from nAmigos,nReceitas, receita
+where x=y and nReceitas.IdReceita = receita.IdReceita

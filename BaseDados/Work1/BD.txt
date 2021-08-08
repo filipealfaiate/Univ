@@ -1,0 +1,57 @@
+drop table if exists membro cascade;
+create table membro(
+Nome varchar(25),
+IdMemb varchar(7) primary key,
+Pais varchar(2),
+Cidade varchar(20),
+DataNasc char(8) --AAAAMMDD
+);
+
+drop table if exists amigo cascade;
+create table amigo(
+IdMemb1 varchar(7),
+IdMemb2 varchar(7),
+primary key (IdMemb1, IdMemb2),
+foreign key (IdMemb1) references membro on delete restrict,
+foreign key (IdMemb2) references membro on delete restrict
+);
+
+drop table if exists gosta cascade;
+create table gosta(
+IdMemb varchar(7),
+ISBN char(3),
+primary key(IdMemb, ISBN),
+foreign key (IdMemb) references membro on delete restrict
+);
+
+drop table if exists livro cascade;
+create table livro(
+ISBN char(3) primary key,
+Titulo varchar(100)
+);
+
+drop table if exists genero cascade;
+create table genero( 
+ISBN char(3),
+Genero varchar(20), 
+primary key(ISBN,Genero),
+foreign key(ISBN) references livro on delete restrict
+);
+
+drop table if exists autor cascade;
+create table autor(
+CodA char(3) primary key,
+Nome varchar(30),
+Pais varchar(20)
+);
+
+drop table if exists autoria cascade;
+create table autoria(
+ISBN char(3),
+CodA char(3),
+primary key (ISBN, CodA),
+foreign key (ISBN) references livro on delete restrict,
+foreign key (CodA) references autor on delete restrict
+);
+
+
