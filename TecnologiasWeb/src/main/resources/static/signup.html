@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+     <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <title>Fnec - Entrar</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="images/fnec_32x32.png">
+     </head>
+
+     <body>
+          <div id="navigationBar">
+               <a href="index.html"><img src="images\fnec_logo.png" alt="Logótipo da loja"></a>
+               <form class="text" method="get">
+                    <input type="text" value="">
+                    <input type="submit" value="Pesquisar">
+                    <a href="advanced_search.html">Pesquisa avançada</a>
+               </form>
+               <div id="auth">
+                    <form action="login.html">
+                         <input class="auth" type="submit" value="Entrar"/>
+                    </form>
+                    <form action="signup.html">
+                         <input type="submit" class="auth" value="Registar"/>
+                    </form>
+               </div>
+          </div>
+
+          <div id="registo">
+               <h3>Bem-vindo à Fnec! Crie conta na loja para conseguir fazer as suas encomendas.</h3>
+               <form class="text" method="post" th:action='@{/new-client}'>
+                    <label for="mail"><b>E-mail:</b></label>
+                    <input type="text" id="mail" name="mail">
+                    <br>
+                    <label for="firstName"><b>Nome:</b></label>
+                    <input type="text" id="firstName" name="firstName">
+                    <br>
+                    <label for="username"><b>Username:</b></label>
+                    <input type="text" id="username" name="username">
+                    <br>
+                    <label for="pw"><b>Password:</b></label>
+                    <input type="password" id="password" name="password">
+                    <br>
+                    <label for="address"><b>Morada:</b></label>
+                    <input type="text" id="address" name="address">
+                    <br>
+                    <input type="submit" value="Registar">
+               </form>
+
+          </div>
+
+          <div id="about">
+               <a href="#">About this page</a>
+          </div>
+     </body>
+</html>

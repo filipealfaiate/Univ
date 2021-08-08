@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+     <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <title>Fnec - Pesquisa Avançada</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="images/fnec_32x32.png">
+     </head>
+
+   
+
+     <body>
+          <div id="navigationBar">
+               <a href="index.html"><img src="images\fnec_logo.png" alt="Logótipo da loja"></a>
+               <form class="searchBar">
+                    <input type="text" value="">
+                    <input type="button" value="Pesquisar">
+               </form>        
+               <div id="auth">
+                    <form action="login.html">
+                         <input class="auth" type="submit" value="Entrar"/>
+                    </form>
+                    <form action="signup.html">
+                         <input type="submit" class="auth" value="Registar"/>
+                    </form>
+               </div>
+          </div>
+          
+          <div id="wrapperAdvSearch">
+               <div id="categories">
+                    <ul>
+                         <li><a href="#">Informática</a></li>
+                         <li><a href="#">Telemóveis</a></li>
+                         <li><a href="#">Música, CDs, Vinil</a></li>
+                         <li><a href="#">Som, Colunas, Auscultadores</a></li>
+                         <li><a href="#">Livros</a></li>
+                         <li><a href="#">Filmes, DVDs</a></li>
+                    </ul>
+               </div>
+
+               <div id="advSearch">
+                    <form action="search.html">
+                         <h2>Pesquisa Avançada</h2>
+                         <h3>Descrição</h3>
+                         <label for="desc">Digite alguma informação relativamente ao que procura:</label>
+                         <input type="text" name="desc" id="desc"><br><br>
+
+                         <h3>Categorias:</h3>
+                         <input type="checkbox" name="ctg1" value="tech">
+                         <label for="ctg1">Informática</label><br>
+                         <input type="checkbox" name="ctg2" value="smartphone">
+                         <label for="ctg2">Telemóveis</label><br>
+                         <input type="checkbox" name="ctg3" value="music">
+                         <label for="ctg3">Música, CDs, Vinil</label><br>
+                         <input type="checkbox" name="ctg4" value="sound">
+                         <label for="ctg4">Som, Colunas, Auscultadores</label><br>
+                         <input type="checkbox" name="ctg5" value="books">
+                         <label for="ctg5">Livros</label><br>
+                         <input type="checkbox" name="ctg6" value="movies">
+                         <label for="ctg6">Filmes, DVDs</label><br><br>
+
+                         <h3>Preço:</h3>
+                         <label for="minPrice">Min:</label>
+                         <input type="text" name="minPrice" id="minPrice"><br><br>
+                         <label for="maxPrice">Máx:</label>
+                         <input type="text" name="maxPrice" id="maxPrice"><br><br><br>
+
+                         <h3>Localização</h3>
+                         <label for="loc">Selecione uma das nossas lojas físicas:</label>
+                         <select name="loc" id="loc">
+                              <option value="avr">Aveiro</option>
+                              <option value="evr">Évora</option>
+                              <option value="far">Faro</option>
+                              <option value="lis">Lisboa</option>
+                         </select><br><br>
+
+                         <h3>Primeira Listagem</h3>
+                         <label for="firstDay">Selecione a data:</label>
+                         <input type="date" name="firstDay" id="firstDay"><br><br>
+
+                         <input type="submit" value="Pesquisar">
+                    </form>
+               </div>
+          </div>
+
+          <div id="about">
+               <a href="#">About this page</a>
+          </div>
+
+     </body>
+</html>

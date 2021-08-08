@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fnec: New Client View</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p><b>Novo utilizador criado com sucesso:</b></p>
+    <p th:text="'Mail: ' + ${mail}"/>
+    <p th:text="'Nome: ' + ${firstName}"/>
+    <p th:text="'Username: ' + ${username}"/>
+    <p th:text="'Password: ' + ${password}"/>
+    <p th:text="'Morada: ' + ${address}"/>
+</body>
+</html>

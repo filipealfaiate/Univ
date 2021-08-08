@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+     xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+     <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <title>Fnec - Entrar</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="images/fnec_32x32.png">
+     </head>
+
+     <body>
+          <div id="navigationBar">
+               <a href="index.html"><img src="images\fnec_logo.png" alt="Logótipo da loja"></a>
+               <form class="text" method="get">
+                    <input type="text" value="">
+                    <input type="submit" value="Pesquisar">
+                    <a href="advanced_search.html">Pesquisa avançada</a>
+               </form>
+               <div id="auth">
+                    <form action="login.html">
+                         <input class="auth" type="submit" value="Entrar"/>
+                    </form>
+                    <form action="signup.html">
+                         <input type="submit" class="auth" value="Registar"/>
+                    </form>
+               </div>
+          </div>
+
+          <div id="login">
+               <h3>Bem-vindo à Fnec!</h3>
+               <form th:action="@{/login}" method="post">
+                    <label for="username"><b>Username:</b></label>
+                    <input type="text" id="username" name="username">
+                    <br>
+                    <label for="password"><b>Password:</b></label>
+                    <input type="password" id="password" name="password">
+                    <br>
+                    <input type="submit" value="Entrar">
+               </form>
+          </div>
+
+          <div id="about">
+               <a href="#">About this page</a>
+          </div>
+     </body>
+</html>

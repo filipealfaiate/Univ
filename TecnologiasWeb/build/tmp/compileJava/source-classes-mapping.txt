@@ -1,0 +1,24 @@
+org/fnec/tweb/onlineshop/Orders.java
+ org.fnec.tweb.onlineshop.Orders
+org/fnec/tweb/onlineshop/NewOrderController.java
+ org.fnec.tweb.onlineshop.NewOrderController
+org/fnec/tweb/onlineshop/UserDetailsServiceImpl.java
+ org.fnec.tweb.onlineshop.UserDetailsServiceImpl
+org/fnec/tweb/onlineshop/ListOrdersController.java
+ org.fnec.tweb.onlineshop.ListOrdersController
+org/fnec/tweb/onlineshop/WebSecurityConfig.java
+ org.fnec.tweb.onlineshop.WebSecurityConfig
+org/fnec/tweb/onlineshop/OrdersRepository.java
+ org.fnec.tweb.onlineshop.OrdersRepository
+org/fnec/tweb/onlineshop/ClientRepository.java
+ org.fnec.tweb.onlineshop.ClientRepository
+org/fnec/tweb/onlineshop/MyUserDetails.java
+ org.fnec.tweb.onlineshop.MyUserDetails
+org/fnec/tweb/onlineshop/Client.java
+ org.fnec.tweb.onlineshop.Client
+org/fnec/tweb/onlineshop/MvcConfig.java
+ org.therestaurant.tweb.jpa.MvcConfig
+org/fnec/tweb/onlineshop/FnecApplication.java
+ org.fnec.tweb.onlineshop.FnecApplication
+org/fnec/tweb/onlineshop/NewClientController.java
+ org.fnec.tweb.onlineshop.NewClientController
