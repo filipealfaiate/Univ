@@ -1,4 +1,0 @@
-admin:admin:1
-ricardo:123:0
-filipe:pass:0
-

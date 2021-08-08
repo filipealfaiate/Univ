@@ -1,4 +1,0 @@
-admin:admin:1
-admin:admin:1
-filipe:123:1
-filipe:123:1
