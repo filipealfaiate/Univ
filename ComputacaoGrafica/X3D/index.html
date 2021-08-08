@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <script type='text/javascript' src ='lib/x3dom/x3dom-full.js'></script>
+        <link rel="stylesheet" type="text/css" href="style/styles.css">
+    </head>
+
+    <body>
+        <h1>Trabalho de Filipe Alfaiate - 43315 X3D</h1>
+        <x3d width='600px' height='600px'> 
+            <scene>
+                <group>
+                    <transform translation='0 1.8 0'>
+                        <shape id='lampada'>
+                            <appearance>
+                                <Material diffuseColor='#FFFF00' transparency='.4'>
+                                </Material>
+                            </appearance>
+                            <sphere radius='2'></sphere>
+                        </shape>
+                    </transform>
+                    <transform translation='0 -.7 0'>
+                        <shape id='casquilho1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'></twoSidedMaterial>
+                            </appearance>
+                            <cylinder height='2' radius='1.2'></cylinder>
+                        </shape>
+                    </transform>
+                    <transform translation='0 -1.7 0'>
+                        <shape id='casquilho2'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'></twoSidedMaterial>
+                            </appearance>
+                            <sphere radius='1.2'></sphere>
+                        </shape>
+                    </transform>
+                    <transform translation='0 -2 0' rotation='1 0 .1 1.5'>
+                        <shape id='rosca1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'></twoSidedMaterial>
+                            </appearance>
+                            <Torus angle='3.5' caps='true' ccw='true' innerRadius='0.1' outerRadius='1.2' solid='true' subdivision='50,50'></Torus>
+                        </shape>
+                    </transform>
+                    <transform translation='0.02 -1.75 -0.07' rotation='1 0 .12 -1.5 '>
+                        <shape id='rosca2'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'></twoSidedMaterial>
+                            </appearance>
+                            <Torus angle='3.5' caps='true' ccw='true' innerRadius='0.1' outerRadius='1.2' solid='true' subdivision='50,50'></Torus>
+                        </shape>
+                    </transform>
+                    <transform translation='0 -1.45 0' rotation='1 0 .1 1.5'>
+                        <shape id='rosca3'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'></twoSidedMaterial>
+                            </appearance>
+                            <Torus angle='3' caps='true' ccw='true' innerRadius='0.1' outerRadius='1.2' solid='true' subdivision='50,50'></Torus>
+                        </shape>
+                    </transform>
+                    <transform translation='0.02 -1.2 -0.07' rotation='1 0 .12 -1.5 '>
+                        <shape id='rosca4'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'></twoSidedMaterial>
+                            </appearance>
+                            <Torus angle='3.5' caps='true' ccw='true' innerRadius='0.1' outerRadius='1.2' solid='true' subdivision='50,50'></Torus>
+                        </shape>
+                    </transform>
+                    <transform translation='0 -0.9 0' rotation='1 0 .1 1.5'>
+                        <shape id='rosca5'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'></twoSidedMaterial>
+                            </appearance>
+                            <Torus angle='3' caps='true' ccw='true' innerRadius='0.1' outerRadius='1.2' solid='true' subdivision='50,50'></Torus>
+                        </shape>
+                    </transform>
+                    <transform translation='0.02 -.65 -0.07' rotation='1 0 .12 -1.5 '>
+                        <shape id='rosca6'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'></twoSidedMaterial>
+                            </appearance>
+                            <Torus angle='3.5' caps='true' ccw='true' innerRadius='0.1' outerRadius='1.2' solid='true' subdivision='50,50'></Torus>
+                        </shape>
+                    </transform>
+                        <pointlight id="point" on="true" intensity="0.9" ambientintensity="30" color="0 0.6 0" location="0 0 0 " attenuation="0 0 0" radius="10" >
+                        </pointlight>   
+                    <transform translation='-1 2 1.5' rotation='1 0 0 1.5'>
+                        <shape id='olho1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='1 1 1'></twoSidedMaterial>
+                            </appearance>
+                            <Dish bottom='true' ccw='true' diameter='1.5' height='0.5' lit='true' radius='1' solid='true' subdivision='50,50'>
+                            </Dish>
+                        </shape>
+                    </transform>
+                    <transform translation='1 2 1.5' rotation='1 0 0 1.5'>
+                        <shape id='olho2'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='1 1 1'></twoSidedMaterial>
+                            </appearance>
+                            <Dish bottom='true' ccw='true' diameter='1.5' height='0.5' lit='true' radius='1' solid='true' subdivision='50,50'>
+                            </Dish>
+                        </shape>
+                    </transform>
+                    <transform translation='1 2 1.9' rotation='1 0 0 1.5'>
+                        <shape id='pupila2'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='1 1 1'></twoSidedMaterial>
+                            </appearance>
+                            <Dish bottom='true' ccw='true' diameter='0.7' height='0.2' lit='true' radius='1' solid='true' subdivision='50,50'>
+                            </Dish>
+                        </shape>
+                    </transform>
+                    <transform translation='-1 2 1.9' rotation='1 0 0 1.5'>
+                        <shape id='pupila1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='1 1 1'></twoSidedMaterial>
+                            </appearance>
+                            <Dish bottom='true' ccw='true' diameter='0.7' height='0.2' lit='true' radius='1' solid='true' subdivision='50,50'>
+                            </Dish>
+                        </shape>
+                    </transform>
+                    <transform translation='-1 0 1.2' rotation='1 0 0 1.5'>
+                        <shape id='braco1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'></twoSidedMaterial>
+                            </appearance>
+                            <cylinder height='3' radius='.2'></cylinder>
+                        </shape>
+                    </transform>
+                    <transform translation='1 0 1.2' rotation='1 0 0 1.5'>
+                        <shape id='braco1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'></twoSidedMaterial>
+                            </appearance>
+                            <cylinder height='3' radius='.2'></cylinder>
+                        </shape>
+                    </transform>
+                    <transform translation='0.7 -3 0'>
+                        <shape id='perna2'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'></twoSidedMaterial>
+                            </appearance>
+                            <cylinder height='3' radius='.2'></cylinder>
+                        </shape>
+                    </transform>
+                    <transform translation='-0.7 -3 0'>
+                        <shape id='perna1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'></twoSidedMaterial>
+                            </appearance>
+                            <cylinder height='3' radius='.2'></cylinder>
+                        </shape>
+                    </transform>
+                    <transform translation='1 0.1 2.5'>
+                        <shape id='mao2'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <sphere radius='.3'></sphere>
+                        </shape>
+                    </transform>
+                    <transform translation='-1 0.1 2.5'>
+                        <shape id='mao1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <sphere radius='.3'></sphere>
+                            </shape>
+                    </transform>
+                    <transform translation='-.7 -4.48 0'>
+                        <shape id='calcanhar1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <sphere radius='.2'></sphere>
+                        </shape>
+                    </transform>
+                    <transform translation='-.7 -4.46 0.2' rotation='1 0 0 1.5'>
+                        <shape id='pe1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <cylinder height='.5' radius='.2'></cylinder>
+                    </transform>
+                    <transform translation='-.7 -4.44 0.45'>
+                        <shape id='pe1.5'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <sphere radius='.2'></sphere>
+                        </shape>
+                    </transform><transform translation='.7 -4.48 0'>
+                        <shape id='calcanhar2'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <sphere radius='.2'></sphere>
+                        </shape>
+                    </transform>
+                    <transform translation='.7 -4.46 0.2' rotation='1 0 0 1.5'>
+                        <shape id='pe2'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <cylinder height='.5' radius='.2'></cylinder>
+                    </transform>
+                    <transform translation='.7 -4.44 0.45'>
+                        <shape id='pe2.5'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <sphere radius='.2'></sphere>
+                        </shape>
+                    </transform>
+                    <transform translation='0 3.9 0'>
+                        <shape id='antena1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <SlopedCylinder bottom='true' ccw='true' height='.2' lit='true' radius='.05' solid='true' subdivision='50' top='true' useGeoCache='true' xbshear='0' xtshear='0.05' ybshear='0' ytshear='0' ></SlopedCylinder>
+
+                    </transform>
+                    <transform translation='-0.01 4.02 0'>
+                        <shape id='antena1.5'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <sphere radius='.05'></sphere>
+                        </shape>
+                    </transform>
+                    <transform translation='-0.18 4.23 0' rotation='0 0 1 .6'>
+                        <shape id='antena1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <SlopedCylinder bottom='true' ccw='true' height='.5' lit='true' radius='.05' solid='true' subdivision='50' top='true' useGeoCache='true' xbshear='0.05' xtshear='-0.05' ybshear='0' ytshear='0'></SlopedCylinder>
+                    </transform>
+                    <transform translation='-0.32 4.46 0'>
+                        <shape id='antena1.5'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <sphere radius='.05'></sphere>
+                        </shape>
+                    </transform>
+                    <transform translation='-0.05 4.9 0' rotation='0 0 1 -.6'>
+                        <shape id='antena1'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <SlopedCylinder bottom='true' ccw='true' height='1' lit='true' radius='.05' solid='true' subdivision='50' top='true' useGeoCache='true' xbshear='0.05' xtshear='0' ybshear='0' ytshear='0'></SlopedCylinder>
+                    </transform>
+                    <transform translation='0.3 5.45 0'>
+                        <shape id='antena1.5'>
+                            <appearance>
+                                <twoSidedMaterial diffuseColor='#2E2E2E'>
+                                </twoSidedMaterial>
+                            </appearance>
+                            <sphere radius='.2'></sphere>
+                        </shape>
+                    </transform>
+                </group>
+            </scene>
+        </x3d>  
+    </body>
+</html>

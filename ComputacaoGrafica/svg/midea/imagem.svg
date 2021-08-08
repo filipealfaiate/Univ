@@ -1,0 +1,566 @@
+<svg width="600" height="600" viewBox="0 0 128 128"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- cores -->
+	<defs>
+        <linearGradient id="grad1">
+        	<stop offset="0.15" stop-color="yellow"/>
+            <stop offset="0.2" stop-color="orange"/>
+            <stop offset="0.4" stop-color="cyan"/>
+            <stop offset="0.7" stop-color="rgb(0,0,156)"/>
+        </linearGradient>
+	<!-- roda -->
+		<g id="roda">
+			<circle cx="32" cy="105" r="20"
+			stroke="grey" stroke-width="1" fill="grey"/>
+			<circle cx="32" cy="105" r="15"
+			stroke="grey" stroke-width="1" fill="brown"/>
+		</g>
+		<g id="raios">
+			<line x1="32" y1="105" x2="18" y2="105"
+			stroke-linecap="round" stroke="black" stroke-width="1"/>
+			<line x1="32" y1="105" x2="46" y2="105"
+			stroke-linecap="round" stroke="black" stroke-width="1"/>
+			<line x1="32" y1="105" x2="18" y2="105"
+			stroke-linecap="round" stroke="black" stroke-width="1" transform="translate(84,8) rotate(45)"/>
+			<line x1="32" y1="105" x2="18" y2="105"
+			stroke-linecap="round" stroke="black" stroke-width="1" transform="translate(-55,43) rotate(-45)"/>
+			<line x1="32" y1="105" x2="18" y2="105"
+			stroke-linecap="round" stroke="black" stroke-width="1" transform="translate(-73,123) rotate(-90)"/>
+			<line x1="32" y1="105" x2="18" y2="105"
+			stroke-linecap="round" stroke="black" stroke-width="1" transform="translate(-73,137) rotate(-90)"/>
+			<line x1="32" y1="105" x2="18" y2="105"
+			stroke-linecap="round" stroke="black" stroke-width="1" transform="translate(-65,53.5) rotate(-45)"/>
+			<line x1="32" y1="105" x2="18" y2="105"
+			stroke-linecap="round" stroke="black" stroke-width="1" transform="translate(94,17.5) rotate(45)"/>
+		</g>
+	<!-- pedal -->
+		<g id="pedal">
+			<line x1="60" y1="107" x2="68" y2="104"
+			stroke-linecap="round" stroke="black" stroke-width="3"/>
+		</g>
+	<!-- sapato -->
+		<g id="sapato">
+			<line x1="68" y1="98" x2="75" y2="95"
+			stroke-linecap="round" style="stroke:rgb(0,0,255); stroke-width:5"/>
+		</g>
+	<!-- olho -->
+		<g id="olho">
+			<path d="M 83,20
+			Q 84.5,18.5 86,20
+			Q 84.5,21.5 83,20"
+			style="fill:white; stroke:black; stroke-width:.25"/>
+			<circle cx="84.5" cy="20" r="0.5"
+			style="fill:rgb(112,219,14); stroke:rgb(112,219,14); stroke-width:.25"/>
+		</g>
+	</defs>
+	<g id="sol_ceu_lua">
+	<!-- ceu -->
+		<rect x="-35" y="-100" width="256" height="256"
+    	fill="url(#grad1)"
+    	transform="rotate(45)"/>
+    <!-- sol -->
+		<circle cx="13" cy="20" r="10"
+		stroke="yellow" stroke-width="1" fill="yellow"/>
+	<!-- lua -->
+		<circle cx="115" cy="108" r="10"
+		stroke="white" stroke-width="1" fill="white"/>
+	</g>
+	<!-- montanha -->
+	<g id="montanha">
+		<rect x="0" y="80" width="128" height="48"
+		fill="brown" stroke="brown" stroke-width="1"/>
+	</g>
+	<!-- neve -->
+	<g id="neve">
+		<path d="M 0,80 Q 18,50 38,70 T 80,55 T 128,80"
+		fill="white" stroke="white" stroke-width="1"/>
+		<path d="M 0,79.9 Q 2,83 4.6,79.9
+		M 10.4,79.9 Q 12,83 14.6,79.9
+		M 20.4,79.9 Q 22,83 24.6,79.9
+		M 30.4,79.9 Q 32,83 34.6,79.9
+		M 40.4,79.9 Q 42,83 44.6,79.9
+		M 50.4,79.9 Q 52,83 54.6,79.9
+		M 60.4,79.9 Q 62,83 64.6,79.9
+		M 70.4,79.9 Q 72,83 74.6,79.9
+		M 80.4,79.9 Q 82,83 84.6,79.9
+		M 90.4,79.9 Q 92,83 94.6,79.9
+		M 100.4,79.9 Q 102,83 104.6,79.9
+		M 110.4,79.9 Q 112,83 114.6,79.9
+		M 120.4,79.9 Q 122,83 124.6,79.9"
+		fill="white" stroke="white" stroke-width="1"/>
+		<path d="M 5.4,80.1 Q 8,77 9.6,80.1
+		M 15.4,80.1 Q 18,77 19.6,80.1
+		M 25.4,80.1 Q 28,77 29.6,80.1
+		M 35.4,80.1 Q 38,77 39.6,80.1
+		M 45.4,80.1 Q 48,77 49.6,80.1
+		M 55.4,80.1 Q 58,77 59.6,80.1
+		M 65.4,80.1 Q 68,77 69.6,80.1
+		M 75.4,80.1 Q 78,77 79.6,80.1
+		M 85.4,80.1 Q 88,77 89.6,80.1
+		M 95.4,80.1 Q 98,77 99.6,80.1
+		M 105.4,80.1 Q 108,77 109.6,80.1
+		M 115.4,80.1 Q 118,77 119.6,80.1
+		M 125.4,80.1 Q 128,77 129.6,80.1"
+		fill="brown" stroke="brown" stroke-width="1"/>
+	</g>
+	<!-- perna direita -->
+	<g id="perna_direita">
+	<!-- perna -->
+		<line x1="72" y1="72" x2="60" y2="76"
+		stroke-linecap="round" style="stroke:rgb(235,199,158); stroke-width:5"/>
+		<line x1="60" y1="76" x2="72" y2="94"
+		stroke-linecap="round" style="stroke:rgb(235,199,158); stroke-width:5"/>
+	<!-- meia -->
+		<polygon points="64.8,87 69.4,86 75,94 70.5,96"
+		style="fill:white; stroke:white; stroke-width:0.5"/>
+		<line x1="65.8" y1="86.5" x2="70" y2="92.7"
+		stroke="red" stroke-width="0.2"/>
+		<line x1="68.4" y1="86" x2="72" y2="91.7"
+		stroke="red" stroke-width="0.2"/>
+		<line x1="64.6" y1="87.4" x2="69.2" y2="85.6"
+		stroke-linecap="round"
+		style="fill:white; stroke:white; stroke-width:1"/>
+	<!-- sapato -->
+		<use xlink:href="#sapato"/>
+	<!-- pedal direito -->
+		<use xlink:href="#pedal" transform="rotate(-5)"/>
+	</g>
+	<!-- poste -->
+	<g id="poste">
+		<line x1="52" y1="128" x2="52" y2="50"
+		stroke-linecap="round"
+		style="stroke:rgb(107,66,38); stroke-width:6"/>
+		<polygon points="40,53.5 70,53.5 65,47.5 70,41.5 40,41.5 40,38 30,47.5 40,57 40,53.5"
+		style="fill:rgb(142,107,35); stroke:rgb(142,107,35); stroke-width:0.5"/>
+		<text x="44" y="52.5" fill="red">
+		20
+		</text>	
+	</g>
+	<!-- roda da frente -->
+	<use xlink:href="#roda"/>
+	<use xlink:href="#raios"/>
+	<!-- roda de tras -->
+	<use xlink:href="#roda" transform="translate(64,0)"/>
+	<use xlink:href="#raios" transform="translate(64,0)"/>
+	<!-- chao -->
+	<g id="chao">
+		<path d="M -200,128
+		L -200,123
+		Q -197.5,124.5 -195,123
+		Q -192.5,121.5 -190,123
+		Q -187.5,124.5 -185,123
+		Q -182.5,121.5 -180,123
+		Q -177.5,124.5 -175,123
+		Q -172.5,121.5 -170,123
+		Q -167.5,121.5 -165,123
+		Q -162.5,121.5 -160,123
+		Q -157.5,124.5 -155,123
+		Q -152.5,121.5 -150,123
+		Q -147.5,124.5 -145,123
+		Q -142.5,121.5 -140,123
+		Q -137.5,124.5 -135,123
+		Q -132.5,121.5 -130,123
+		Q -127.5,124.5 -125,123
+		Q -122.5,121.5 -120,123
+		Q -117.5,124.5 -115,123
+		Q -112.5,121.5 -110,123
+		Q -107.5,124.5 -105,123
+		Q -102.5,121.5 -100,123
+		Q -97.5,124.5 -95,123
+		Q -92.5,121.5 -90,123
+		Q -87.5,124.5 -85,123
+		Q -82.5,121.5 -80,123
+		Q -77.5,124.5 -75,123
+		Q -72.5,121.5 -70,123
+		Q -67.5,124.5 -65,123
+		Q -62.5,121.5 -60,123
+		Q -57.5,124.5 -55,123
+		Q -52.5,121.5 -50,123
+		Q -47.5,124.5 -45,123
+		Q -42.5,121.5 -40,123
+		Q -37.5,124.5 -35,123
+		Q -32.5,121.5 -30,123
+		Q -27.5,124.5 -25,123
+		Q -22.5,121.5 -20,123
+		Q -17.5,124.5 -15,123
+		Q -12.5,121.5 -10,123
+		Q -7.5,124.5 -5,123
+		Q -2.5,121.5 0,123
+		Q 2.5,124.5 5,123
+		Q 7.5,121.5 10,123
+		Q 12.5,124.5 15,123
+		Q 17.5,121.5 20,123
+		Q 22.5,124.5 25,123
+		Q 27.5,121.5 30,123
+		Q 32.5,124.5 35,123
+		Q 37.5,121.5 40,123
+		Q 42.5,124.5 45,123
+		Q 47.5,121.5 50,123
+		Q 52.5,124.5 55,123
+		Q 57.5,121.5 60,123
+		Q 62.5,124.5 65,123
+		Q 67.5,121.5 70,123
+		Q 72.5,124.5 75,123
+		Q 77.5,121.5 80,123
+		Q 82.5,124.5 85,123
+		Q 87.5,121.5 90,123
+		Q 92.5,124.5 95,123
+		Q 97.5,121.5 100,123
+		Q 102.5,124.5 105,123
+		Q 107.5,121.5 110,123
+		Q 112.5,124.5 115,123
+		Q 117.5,121.5 120,123
+		Q 122.5,124.5 125,123 
+		Q 127.5,121.5 130,123
+		Q 132.5,124.5 135,123
+		L 135,128
+		L -200,128"		
+		style="fill:rgb(142,107,35);"/>
+	</g>
+	<!-- braço direito -->
+	<g id="braço_d">
+		<line x1="75" y1="45" x2="63" y2="62"
+		stroke-linecap="round" style="stroke:rgb(235,199,158); stroke-width:5"/>
+		<line x1="62" y1="63" x2="47" y2="73"
+		stroke-linecap="round" style="stroke:rgb(235,199,158); stroke-width:5"/>
+		<line x1="46" y1="73" x2="42" y2="72.5"
+		stroke-linecap="round" style="stroke:rgb(235,199,158); stroke-width:5"/>
+	</g>
+	<!-- quadro da biciclete -->
+	<!-- da roda esquerda ao volante -->
+	<g id="quadro">
+		<line x1="32" y1="105" x2="48" y2="75"
+		stroke-linecap="round" style="stroke:rgb(147,219,112); stroke-width:3"/>
+	<!-- do volante ao celim -->
+		<line x1="46" y1="80" x2="78" y2="84"
+		stroke-linecap="round" style="stroke:rgb(147,219,112); stroke-width:3"/>
+	<!-- do volante aos pedais -->
+		<line x1="46" y1="80" x2="64" y2="105"
+		stroke-linecap="round" style="stroke:rgb(147,219,112); stroke-width:3"/>
+	<!-- dos pedais aos celim -->
+		<line x1="64" y1="105" x2="80" y2="80"
+		stroke-linecap="round" style="stroke:rgb(147,219,112); stroke-width:3"/>
+	<!-- dos pedais a roda direita -->
+		<line x1="64" y1="105" x2="96" y2="105"
+		stroke-linecap="round" style="stroke:rgb(147,219,112); stroke-width:3"/>
+	<!-- do celim a roda direita -->
+		<line x1="78" y1="84" x2="96" y2="105"
+		stroke-linecap="round" style="stroke:rgb(147,219,112); stroke-width:3"/>
+	</g>
+	<!-- celim -->
+	<g id="celim">
+		<line x1="48" y1="75" x2="42" y2="73"
+		stroke-linecap="round" stroke="grey" stroke-width="3"/>
+	</g>
+	<!-- volante -->
+	<g id="volante">
+		<line x1="84" y1="80" x2="75" y2="78"
+		stroke-linecap="round" stroke="black" stroke-width="5"/>
+	</g>
+	<!-- perna esquerda -->
+	<g id="perna_esquerda">
+	<!-- perna -->
+		<line x1="75" y1="75" x2="58" y2="85"
+		stroke-linecap="round" style="stroke:rgb(235,199,158); stroke-width:5"/>
+		<line x1="58" y1="85" x2="65" y2="100"
+		stroke-linecap="round" style="stroke:rgb(235,199,158); stroke-width:5"/>
+	<!-- meia -->
+		<polygon points="59,92 63,91 67.5,100 63,101"
+		style="fill:white; stroke:white; stroke-width:0.5"/>
+		<line x1="60" y1="91.5" x2="63" y2="98"
+		stroke="red" stroke-width="0.2"/>
+		<line x1="62" y1="91" x2="64.8" y2="97.3"
+		stroke="red" stroke-width="0.2"/>
+		<line x1="58.6" y1="92.4" x2="63.4" y2="90.6"
+		stroke-linecap="round"
+		style="fill:white; stroke:white; stroke-width:1"/>
+	<!-- sapato -->
+		<use xlink:href="#sapato" transform="rotate(5)"/>
+	<!-- pedal esquerdo -->
+		<use xlink:href="#pedal"/>
+	</g>
+	<!-- calcoes -->
+	<g id="calcoes">
+		<path d="M 80,71
+		L 70,74
+		Q 74,75 74,80 
+		L 84,78
+		Q 89,78 90,74
+		Q 91,71 89,68
+		Q 80,70 75,66
+		Q 76,68 67,71
+		Q 71,71 71,74"
+		style="stroke:rgb(35,35,142); stroke-width:0.5"/>
+	</g>
+	<!-- pescoço -->
+	<g id="pescoco">
+		<path d="M 81,36
+		Q 84,35 84,28
+		Q 87,30 90,28
+		Q 89,37 93,36
+		Q 86,40 81,36"
+		style="fill:rgb(235,199,158); stroke:rgb(235,199,158); stroke-width:.25"/>
+	</g>
+	<!-- cabeca -->
+	<g id="cabeca">
+		<ellipse cx="87" cy="22" rx="7" ry="9" 
+		style="fill:rgb(235,199,158);stroke:rgb(235,199,158); stroke-width:.2"/>
+	<!-- queixo -->
+		<path d="M 86.5,29
+		Q 87.5,28.5 88.5,29
+		Q 87.5,28.5 86.5,29"
+		style="stroke:rgb(219,147,112); stroke-width:.25"/>
+	<!-- lingua -->
+		<path d="M 86,27
+		Q 87.5,25 89,27
+		Q 87.5,28 86,27"
+		style="fill:rgb(204,50,153); stroke:rgb(204,50,153); stroke-width:.25"/>
+	<!-- dentes -->
+		<path d="M 84,25
+		L 84.7,26
+		Q 87.5,27 90.3,26
+		L 91,25
+		Q 87.5,26 84,25"
+		style="fill:white; stroke:white; stroke-width:.25"/>
+		<line x1="85.7" y1="25.3" x2="85.6" y2="26.4"
+		style="stroke:black; stroke-width:.1"/>
+		<line x1="86.8" y1="25.4" x2="86.8" y2="26.6"
+		style="stroke:black; stroke-width:.1"/>
+		<line x1="88" y1="25.4" x2="88" y2="26.6"
+		style="stroke:black; stroke-width:.1"/>
+		<line x1="89.2" y1="25.4" x2="89.2" y2="26.5"
+		style="stroke:black; stroke-width:.1"/>
+		<line x1="90.4" y1="25.1" x2="90.4" y2="25.9"
+		style="stroke:black; stroke-width:.1"/>
+	<!-- boca -->
+		<path d="M 84,25
+		Q 87.5,26 91,25
+		Q 87.5,30 84,25"
+		stroke-linecap="round" style="fill:none; stroke:red; stroke-width:.25"/>
+	<!-- nariz -->
+		<path d="M 86,22.7
+		L 85.8,23
+		Q 85.6,23.8 86.4,23.8
+		Q 86.2,23.2 87,23.8
+		Q 87.2,23.9 87.4,23.8
+		Q 87.8,23.2 88,23.8
+		Q 88.8,23.8 88.6,23
+		L 88.4,22.7"
+		style="fill:none; stroke:rgb(219,147,112); stroke-width:.2"/>
+	<!-- olho esquerdo -->
+		<use xlink:href="#olho"/>
+	<!-- olho direito -->
+		<use xlink:href="#olho" transform="translate(6,0)"/>
+	<!-- sobrancelha esquerda -->
+		<path d="M 82,19
+		Q 85,17.5 86,18.5
+		Q 84.6,18.5 82,19"
+		style="fill:rgb(92,64,51); stroke:rgb(92,64,51); stroke-width:.2"/>
+	<!-- sobrancelha direita -->
+		<path d="M 93,19
+		Q 90,17.5 89,18.5
+		Q 91.6,18.5 93,19"
+		style="fill:rgb(92,64,51); stroke:rgb(92,64,51); stroke-width:.2"/>
+	<!-- cabelo -->
+		<path d="M 82,16
+		Q 82,18 86,17.5
+		Q 92,16 95,18
+		Q 93,15.5 92,16
+		M 92.8,17
+		Q 93.3,18.7 93.8,19.4
+		Q 94,15 90,13
+		Q 85,12.5 84,13.8
+		Q 78,15 80,21
+		L 82,21
+		Q 81,20 82,16
+		"
+		style="fill:rgb(92,64,51); stroke:black; stroke-width:.2"/>
+	<!-- orelha esquerda -->
+		<path d="M 80.4,20
+		Q 80.2,20.3 80.2,19.8
+		Q 79.8,18 79,19
+		Q 78.5,21 79.4,23
+		Q 80,24 80.4,23.5"
+		style="fill:rgb(235,199,158); stroke:rgb(219,147,112); stroke-width:.2"/>
+	</g>
+	<!-- braco esquerdo -->
+	<g id="braco_e">
+		<line x1="100" y1="37" x2="115" y2="35"
+		stroke-linecap="round" style="stroke:rgb(235,199,158); stroke-width:5"/>
+	</g>
+	<g id="antebraco_e">
+		<line x1="116.5" y1="34.5" x2="111" y2="20"
+		stroke-linecap="round" style="stroke:rgb(235,199,158); stroke-width:5"/>
+	<!-- mao -->
+		<path d="M 107,23
+		Q 105,22 105,19
+		Q 105,18 103,17
+		Q 102.5,16 103.5,16
+		Q 106,16 107,18
+		Q 109,20 108,18
+		Q 107,14 107,12
+		Q 107.75,11 109,12
+		Q 109.5,14 110,16
+		M 109,12
+		L 108.75,10.5
+		Q 109.5,9.5 110.75,10.5
+		Q 111.5,14 112,16
+		L 114,13.5
+		Q 116,14 117,17
+		Q 118,20 116,22
+		Q 113,25 107,23"
+		style="fill:rgb(235,199,158); stroke:rgb(235,199,158); stroke-width:.5"
+		transform="translate(43,6)scale(0.6,0.6)"/>
+	<!-- dedo escuro esquerdo -->
+		<line x1="112.7" y1="14" x2="114" y2="18"
+		stroke-linecap="round" style="stroke:rgb(219,147,112); stroke-width:2"
+		transform="translate(43,6)scale(0.6,0.6)"/>
+	<!-- unha do mesmo dedo -->
+		<path d="M 113.4,18
+		L 115,17.6
+		L 114.5,18.5
+		Q 114,18.9 113.5,18.6
+		L 113.4,18"
+		style="fill:white; stroke:white; stroke-width:.25" transform="translate(43,6)scale(0.6,0.6)"/>
+	<!-- dedo escuro direito -->
+		<line x1="114" y1="13.5" x2="115" y2="17.5"
+		stroke-linecap="round" style="stroke:rgb(219,147,112); stroke-width:2"
+		transform="translate(43,6)scale(0.6,0.6)"/>
+	<!-- unha do mesmo dedo -->
+		<path d="M 114.3,17.5
+		L 115.3,17.2
+		L 115.5,17.7
+		Q 115,18.1 114.7,18.1
+		L 114.3,17.5"
+		style="fill:white; stroke:white; stroke-width:.25" transform="translate(43,6)scale(0.6,0.6)"/>
+	</g>
+	<!-- tronco -->
+	<g id="tronco">
+		<path d="M 89,68 
+		Q 88,40 98,40
+		L 103,40
+		Q 102,36 103,34
+		L 97,35
+		Q 94.5,34 92,35
+		Q 84,38 82,36
+		Q 79,35 77,38
+		L 72,45
+		Q 73,46 73.5,51
+		L 78,45
+		Q 76,55 75,66
+		Q 80,70 89,68"
+		style="fill:rgb(255,255,0); stroke:rgb(255,255,0); stroke-width:0.5"/>
+	</g>
+	<!-- animaçoes -->
+	<animateTransform
+		xlink:href="#sol_ceu_lua"
+		attributeName="transform"
+		attributeType="XML"
+		type="rotate"
+		from="0 64 64"
+		to="360 64 64"
+		dur="10s"
+		begin="0s"
+		repeatCount="indefinite"
+		fill="freeze"/>
+	<animateTransform
+		xlink:href="#raios"
+		attributeName="transform"
+		attributeType="XML"
+		type="rotate"
+		from="0 32 105"
+		to="-360 32 105"
+		dur="10s"
+		begin="0s"
+		repeatCount="indefinite"
+		fill="freeze"/>
+	<animateTransform 
+        xlink:href="#antebraco_e"
+		attributeName="transform"
+		attributeType="XML"
+		type="rotate"
+		from="0 115 35"
+		to="-35 115 35"
+		dur="2s"
+		begin="0s; 4s; 8s; 12s; 16s; 20s; 24s; 28s; 32s; 36s; 40s; 44s; 48s; 52s; 56s; 60s; 64s; 68s; 72s; 76s; 80s; 84s; 88s; 92s; 96s; 100s; 104s; 108s; 112s; 116s; 120s;"
+		repeatCount="indefinite"
+		fill="freeze"/>
+	<animateTransform 
+        xlink:href="#antebraco_e"
+		attributeName="transform"
+		attributeType="XML"
+		type="rotate"
+		from="-35 115 35"
+		to="0 115 35"
+		dur="2s"
+		begin="2s; 6s; 10s; 14s; 18s; 22s; 26s; 30s; 34s; 38s; 42s; 46s; 50s; 54s; 58s; 62s; 66s; 70s; 74s; 78s; 82s; 86s; 90s; 94s; 98s; 102s; 106s; 110s; 114s; 118s; 122s;"
+		repeatCount="indefinite"
+		fill="freeze"/>
+	<animateTransform 
+        xlink:href="#perna_esquerda"
+		attributeName="transform"
+		attributeType="XML"
+		type="rotate"
+		from="0 75 75"
+		to="20 75 75"
+		dur="2s"
+		begin="0s; 4s; 8s; 12s; 16s; 20s; 24s; 28s; 32s; 36s; 40s; 44s; 48s; 52s; 56s; 60s; 64s; 68s; 72s; 76s; 80s; 84s; 88s; 92s; 96s; 100s; 104s; 108s; 112s; 116s; 120s;"
+		repeatCount="indefinite"
+		fill="freeze"/>
+	<animateTransform 
+        xlink:href="#perna_esquerda"
+		attributeName="transform"
+		attributeType="XML"
+		type="rotate"
+		from="20 75 75"
+		to="0 75 75"
+		dur="2s"
+		begin="2s; 6s; 10s; 14s; 18s; 22s; 26s; 30s; 34s; 38s; 42s; 46s; 50s; 54s; 58s; 62s; 66s; 70s; 74s; 78s; 82s; 86s; 90s; 94s; 98s; 102s; 106s; 110s; 114s; 118s; 122s;"
+		repeatCount="indefinite"
+		fill="freeze"/>
+	<animateTransform 
+        xlink:href="#perna_direita"
+		attributeName="transform"
+		attributeType="XML"
+		type="rotate"
+		from="20 72 72"
+		to="0 72 72"
+		dur="2s"
+		begin="0s; 4s; 8s; 12s; 16s; 20s; 24s; 28s; 32s; 36s; 40s; 44s; 48s; 52s; 56s; 60s; 64s; 68s; 72s; 76s; 80s; 84s; 88s; 92s; 96s; 100s; 104s; 108s; 112s; 116s; 120s;"
+		repeatCount="indefinite"
+		fill="freeze"/>
+	<animateTransform 
+        xlink:href="#perna_direita"
+		attributeName="transform"
+		attributeType="XML"
+		type="rotate"
+		from="0 72 72"
+		to="20 72 72"
+		dur="2s"
+		begin="2s; 6s; 10s; 14s; 18s; 22s; 26s; 30s; 34s; 38s; 42s; 46s; 50s; 54s; 58s; 62s; 66s; 70s; 74s; 78s; 82s; 86s; 90s; 94s; 98s; 102s; 106s; 110s; 114s; 118s; 122s;"
+		repeatCount="indefinite"
+		fill="freeze"/>
+	<animateTransform 
+        xlink:href="#poste"
+		attributeName="transform"
+		attributeType="XML"
+		type="rotate"
+		from="-0.1 50 100000"
+		to="0.1 50 100000"
+		dur="5s"
+		begin="0s"
+		repeatCount="indefinite"
+		fill="freeze"/>
+	<animateTransform 
+        xlink:href="#chao"
+		attributeName="transform"
+		attributeType="XML"
+		type="rotate"
+		from="0 50 10000"
+		to="0.1 50 100000"
+		dur="20s"
+		begin="0s"
+		repeatCount="indefinite"
+		fill="freeze"/>
+</svg>
